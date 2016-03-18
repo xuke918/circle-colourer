@@ -1,9 +1,11 @@
 var $input = $('#colour-input');
-var $ball = $(".ball");
+var $ball = $('.ball');
 
-$('form').on('submit', function(e) {
+$('form').on('submit', function (e) {
   var $div = $('<div>');
   e.preventDefault();
   $div.html($input.val());
   $ball.append($div);
+
+  $ball.css('on', Math.random() * 400);
 });
