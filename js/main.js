@@ -1,11 +1,8 @@
+var $html = $('html');
 var $input = $('#colour-input');
 var $ball = $('.ball');
+var $form = $('form');
 
-$('form').on('submit', function (e) {
-  var $div = $('<div>');
-  e.preventDefault();
-  $div.html($input.val());
-  $ball.append($div);
-
-  $ball.css('on', Math.random() * 400);
+$('form').on('change', function () {
+  $ball.css('background-color', $input.val());
 });
